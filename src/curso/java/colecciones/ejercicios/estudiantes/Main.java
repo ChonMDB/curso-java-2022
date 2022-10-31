@@ -3,6 +3,7 @@ package curso.java.colecciones.ejercicios.estudiantes;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Main {
 
@@ -20,7 +21,8 @@ public class Main {
 		Estudiante estudiante4 = new Estudiante("Basilio ", "Sandoval", "4444L", asignaturasEstudiante4);
 		Estudiante estudiante5 = new Estudiante("Fidel  ", "Martin", "5555R", asignaturasEstudiante5);
 		
-		ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
+		CopyOnWriteArrayList<Estudiante> estudiantes = new CopyOnWriteArrayList<Estudiante>();
+		
 		estudiantes.add(estudiante1);
 		estudiantes.add(estudiante2);
 		estudiantes.add(estudiante3);
@@ -63,10 +65,13 @@ public class Main {
 		main.soloSuspensosLengua(estudiantes);
 		System.out.println();
 		
+		estudiante4.addAsignatura(new Asignatura("Quimica", 5));
+		main.mostrarEstudiantes(estudiantes);
+		
 		
 	}
 	
-	public void mostrarEstudiantes(ArrayList<Estudiante> estudiantes) {
+	private void mostrarEstudiantes(CopyOnWriteArrayList<Estudiante> estudiantes) {
 		System.out.println("Los estudiantes, sus asignaturas y sus notas: \n");
 		
 		for (Estudiante estudiante : estudiantes) {
@@ -75,7 +80,7 @@ public class Main {
 		}
 	}
 	
-	public void soloMatematicas(ArrayList<Estudiante> estudiantes) {
+	private void soloMatematicas(CopyOnWriteArrayList<Estudiante> estudiantes) {
 		String asignatura = "Matemáticas";
 		System.out.println("Los estudiantes que han cursado " + asignatura + " son:");
 		for (Estudiante estudiante : estudiantes) {
@@ -87,7 +92,7 @@ public class Main {
 		}
 	}
 	
-	public void aprobado(ArrayList<Estudiante> estudiantes) {
+	private void aprobado(CopyOnWriteArrayList<Estudiante> estudiantes) {
 		System.out.println("Los alumnos aprobados son: ");
 		for (Estudiante estudiante : estudiantes) {
 			if(estudiante.media(estudiante.getAsignaturas()) >= 5){
@@ -96,8 +101,9 @@ public class Main {
 		}
 	}
 	
-	public void soloSuspensosLengua(ArrayList<Estudiante> estudiantes) {
+	private void soloSuspensosLengua(CopyOnWriteArrayList<Estudiante> estudiantes) {
 		String asignatura = "Lengua";
+		
 		System.out.println("Los estudiantes que han suspendido " + asignatura + " son:");
 		for (Estudiante estudiante : estudiantes) {
 			for (Asignatura estudianteSuspendidoLengua : estudiante.getAsignaturas()) {
@@ -110,7 +116,5 @@ public class Main {
 			}
 		}
 	}
-	
-	
-	
+
 }

@@ -11,7 +11,9 @@ public class Batalla {
 		ComandoDeElite comandoElite3 = new ComandoDeElite();
 		ComandoDeElite comandoElite4 = new ComandoDeElite();
 		ComandoDeElite comandoElite5 = new ComandoDeElite();
+		
 		ArrayList<ComandoDeElite> naveComandoElite = new ArrayList<ComandoDeElite>();
+		
 		naveComandoElite.add(comandoElite1);
 		naveComandoElite.add(comandoElite2);
 		naveComandoElite.add(comandoElite3);
@@ -23,6 +25,7 @@ public class Batalla {
 		Gorgonita gorgonita3 = new Gorgonita();
 		Gorgonita gorgonita4 = new Gorgonita();
 		Gorgonita gorgonita5 = new Gorgonita();
+		
 		ArrayList<Gorgonita> naveGorgonita = new ArrayList<Gorgonita>();
 		
 		naveGorgonita.add(gorgonita1);
@@ -30,6 +33,8 @@ public class Batalla {
 		naveGorgonita.add(gorgonita3);
 		naveGorgonita.add(gorgonita4);
 		naveGorgonita.add(gorgonita5);
+		
+		System.out.println(naveGorgonita);
 	}
 
 }

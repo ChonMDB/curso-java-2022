@@ -41,7 +41,9 @@ public class Estudiante {
 	public void setAsignaturas(Set<Asignatura> asignaturas) {
 		this.asignaturas = asignaturas;
 	}
-
+	public void addAsignatura(Asignatura asignatura) {
+		this.asignaturas.add(asignatura);
+	}
 
 	@Override
 	public String toString() {
