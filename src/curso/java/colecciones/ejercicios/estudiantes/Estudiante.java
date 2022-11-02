@@ -16,6 +16,12 @@ public class Estudiante {
 		this.asignaturas = asignatura;
 	}
 	
+	public Estudiante(String nombre, String apellidos, String dni) {
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.dni = dni;
+	}
+	
 	
 	public String getNombre() {
 		return nombre;
