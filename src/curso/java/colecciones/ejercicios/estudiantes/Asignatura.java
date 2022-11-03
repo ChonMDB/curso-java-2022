@@ -10,6 +10,10 @@ public class Asignatura {
 		this.nota = nota;
 	}
 	
+	public Asignatura(String nombre) {
+		this.nombre = nombre;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -25,7 +29,7 @@ public class Asignatura {
 
 	@Override
 	public String toString() {
-		return nombre + "= " + nota;
+		return nombre;
 	}
 	
 }
